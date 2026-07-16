@@ -1,0 +1,159 @@
+{
+  "personal": {
+    "name": "Aditya Singh",
+    "title": "AI/ML Engineer & Full-Stack Developer",
+    "subtitle": "Building intelligent systems that verify, predict, and automate.",
+    "resumeUrl": "/resume.pdf",
+    "socials": {
+      "github": "https://github.com",
+      "linkedin": "https://linkedin.com",
+      "email": "aditya.singh@example.com"
+    }
+  },
+  "about": {
+    "summary": "Aditya is a final-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at K.R. Mangalam University, graduating in July 2027. He has successfully completed multiple machine learning and data science internships and currently builds full-stack AI products. His portfolio spans resume-verification engines, voice-enabled AI agents, and computer vision alerting systems, combining LangChain-based orchestration, FastAPI backends, and modern React frontends. Certified in Large Language Models and Neural Networks & Deep Learning."
+  },
+  "experience": [
+    {
+      "company": "EDXcellence LLP",
+      "role": "Machine Learning Intern",
+      "period": "Jan 2026 – Mar 2026",
+      "duration": "3 months",
+      "description": "Contributed to projects leveraging data aggregation, feature selection, and Git-based collaboration."
+    },
+    {
+      "company": "Unified Mentor Private Limited",
+      "role": "Data Science Intern",
+      "period": "Jun 2025 – Jul 2025",
+      "duration": "2 months",
+      "description": "Worked on applied data science tasks including data cleaning and model support."
+    },
+    {
+      "company": "Mood Indigo, IIT Bombay",
+      "role": "Squad Member",
+      "period": "Dec 2024 – Present",
+      "duration": "Ongoing",
+      "description": "Engaged in collaborative event coordination and volunteer squad efforts for Asia's largest college festival."
+    },
+    {
+      "company": "PW (PhysicsWallah)",
+      "role": "Campus Ambassador",
+      "period": "Nov 2024 – Present",
+      "duration": "Ongoing",
+      "description": "Promoting education technology initiatives and representing PW academic support systems on campus."
+    },
+    {
+      "company": "BLACKBOX.AI",
+      "role": "Student Ambassador",
+      "period": "Sep 2024 – Dec 2024",
+      "duration": "4 months",
+      "description": "Promoted AI community initiatives, fostered AI leadership among students, and built AI awareness through resource sharing."
+    },
+    {
+      "company": "KEIC (KRMU Entrepreneurship & Incubation Center)",
+      "role": "IoT Intern",
+      "period": "Jun 2024 – Jul 2024",
+      "duration": "2 months",
+      "description": "Researched internet-of-things protocols, sensors, and basic hardware integration."
+    },
+    {
+      "company": "Atharvo",
+      "role": "Machine Learning Intern",
+      "period": "Jan 2024",
+      "duration": "1 month",
+      "description": "Completed early-stage machine learning internship focused on basic modeling and Python scripting."
+    }
+  ],
+  "projects": [
+    {
+      "title": "TrueHire AI",
+      "description": "AI-powered interview intelligence platform that verifies resume claims against GitHub evidence and auto-generates personalized interview questions. Owns full AI/ML orchestration pipeline, LangChain integrations, and scoring logic.",
+      "tags": [
+        "FastAPI",
+        "LangChain",
+        "React",
+        "Vite",
+        "Python"
+      ],
+      "github": "https://github.com",
+      "demo": "https://example.com"
+    },
+    {
+      "title": "Citadel",
+      "description": "Real-time accident detection system processing 1000+ CCTV feeds using YOLO and DETR, with automated Twilio alerting.",
+      "tags": [
+        "YOLO",
+        "DETR",
+        "Computer Vision",
+        "Twilio",
+        "Python"
+      ],
+      "github": "https://github.com",
+      "demo": "https://example.com"
+    },
+    {
+      "title": "Supermarket Sales Prediction System",
+      "description": "Sales forecasting model achieving 0.91 R² using XGBoost.",
+      "tags": [
+        "XGBoost",
+        "Python",
+        "Data Science"
+      ],
+      "github": "https://github.com",
+      "demo": "https://example.com"
+    }
+  ],
+  "skills": {
+    "Languages": [
+      "Python",
+      "JavaScript"
+    ],
+    "AI/ML": [
+      "LangChain",
+      "XGBoost",
+      "YOLO",
+      "DETR",
+      "Neural Networks",
+      "LLMs"
+    ],
+    "Backend": [
+      "FastAPI"
+    ],
+    "Frontend": [
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS"
+    ],
+    "Databases": [
+      "PostgreSQL",
+      "MongoDB",
+      "SQL Server"
+    ],
+    "Tools": [
+      "Git",
+      "Postman",
+      "Twilio",
+      "Airtable",
+      "Data Cleaning",
+      "Incident Investigation"
+    ]
+  },
+  "certifications": [
+    {
+      "name": "Large Language Models",
+      "issuer": "Certificate of Accomplishment"
+    },
+    {
+      "name": "Neural Networks and Deep Learning",
+      "issuer": "Certificate of Accomplishment"
+    },
+    {
+      "name": "Generative AI",
+      "issuer": "Google"
+    },
+    {
+      "name": "Foundations of AI Data Science",
+      "issuer": "Cognitive Class"
+    }
+  ]
+}
