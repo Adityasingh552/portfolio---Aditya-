@@ -126,6 +126,14 @@
       "Streamlit"
     ]
   },
+  "education": [
+    {
+      "institution": "K.R. Mangalam University",
+      "degree": "Bachelor of Technology (B.Tech) in Computer Science Engineering (Artificial Intelligence and Machine Learning)",
+      "period": "September 2023 – July 2027 (Expected)",
+      "status": "Currently Pursuing"
+    }
+  ],
   "certifications": [
     {
       "name": "Big Data Engineer",

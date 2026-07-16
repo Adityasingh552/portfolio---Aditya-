@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Experience from './components/Experience'
+import Education from './components/Education'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Certifications from './components/Certifications'
@@ -28,6 +29,7 @@ export default function App() {
           <Hero />
           <About />
           <Experience />
+          <Education />
           <Skills selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
           <Projects selectedTag={selectedTag} setSelectedTag={setSelectedTag} />
           <Certifications />
