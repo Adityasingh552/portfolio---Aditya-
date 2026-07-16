@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Github, ExternalLink, Code } from 'lucide-react'
 
@@ -7,8 +7,20 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
   const [rotateX, setRotateX] = useState(0)
   const [rotateY, setRotateY] = useState(0)
   const [spotlightStyle, setSpotlightStyle] = useState({ opacity: 0 })
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const touchCheck = 'ontouchstart' in window || navigator.maxTouchPoints > 0
+      setIsMobile(window.innerWidth < 768 || touchCheck)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const handleMouseMove = (e) => {
+    if (isMobile) return
     if (!cardRef.current) return
     const card = cardRef.current
     const rect = card.getBoundingClientRect()
@@ -43,7 +55,7 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      style={{
+      style={isMobile ? {} : {
         transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
         transition: 'transform 0.1s ease-out, box-shadow 0.3s ease-in-out',
         transformStyle: 'preserve-3d'

@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Filter, X } from 'lucide-react'
 import profileData from '../data/profileData.json'
 import SkillChip from './SkillChip'
 
 export default function Skills({ selectedTag, setSelectedTag }) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const categories = profileData.skills
 
   const handleSkillClick = (skill) => {
@@ -18,17 +28,19 @@ export default function Skills({ selectedTag, setSelectedTag }) {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1
+        staggerChildren: isMobile ? 0.05 : 0.1
       }
     }
   }
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: isMobile ? 10 : 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { type: 'spring', stiffness: 100, damping: 15 }
+      transition: isMobile
+        ? { duration: 0.35, ease: 'easeOut' }
+        : { type: 'spring', stiffness: 100, damping: 15 }
     }
   }
 
@@ -74,7 +86,7 @@ export default function Skills({ selectedTag, setSelectedTag }) {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
+          viewport={{ once: true, margin: isMobile ? '-30px' : '-100px' }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {Object.entries(categories).map(([category, skillList]) => (

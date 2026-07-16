@@ -1,9 +1,18 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { GraduationCap, Code2, BrainCircuit, Calendar } from 'lucide-react'
 import profileData from '../data/profileData.json'
 
 export default function About() {
   const { summary } = profileData.about
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
   
   const stats = [
     {
@@ -29,11 +38,11 @@ export default function About() {
   ]
 
   const fadeInVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: isMobile ? 15 : 40 },
     visible: { 
       opacity: 1, 
       y: 0, 
-      transition: { duration: 0.6, ease: 'easeOut' } 
+      transition: { duration: isMobile ? 0.35 : 0.6, ease: 'easeOut' } 
     }
   }
 
@@ -45,7 +54,7 @@ export default function About() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: isMobile ? '-30px' : '-100px' }}
         variants={fadeInVariants}
         className="space-y-12"
       >

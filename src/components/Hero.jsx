@@ -1,27 +1,39 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, FileText, Bot, Sparkles, Terminal } from 'lucide-react'
 import profileData from '../data/profileData.json'
 
 export default function Hero() {
   const { name, title, subtitle, resumeUrl } = profileData.personal
+  const [imgSrc, setImgSrc] = useState('/profile.jpg')
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
+        staggerChildren: isMobile ? 0.08 : 0.2,
+        delayChildren: 0.05
       }
     }
   }
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: isMobile ? 15 : 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
-      transition: { type: 'spring', stiffness: 100, damping: 15 }
+      transition: isMobile
+        ? { duration: 0.35, ease: 'easeOut' }
+        : { type: 'spring', stiffness: 100, damping: 15 }
     }
   }
 
@@ -91,60 +103,54 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right Column: Premium AI Card Mockup Visual */}
+        {/* Right Column: Profile Photo with Glowing Effect */}
         <motion.div
           variants={itemVariants}
-          className="lg:col-span-5 hidden lg:block"
+          className="lg:col-span-5 flex justify-center items-center mt-12 lg:mt-0"
         >
-          <div className="relative group p-1.5 rounded-2xl bg-gradient-to-tr from-blue-500/20 via-violet-500/10 to-emerald-500/20 border border-white/5 glow-violet">
-            <div className="glass p-6 md:p-8 rounded-2xl relative overflow-hidden flex flex-col justify-between aspect-square">
-              {/* Card Glow Corner */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-violet-600/20 to-transparent blur-xl pointer-events-none" />
-              
-              <div className="flex items-center justify-between border-b border-white/5 pb-4">
-                <div className="flex items-center space-x-2">
-                  <Terminal className="w-4 h-4 text-emerald-400" />
-                  <span className="font-mono text-xs text-gray-400">engine_status: ready</span>
-                </div>
-                <div className="flex space-x-1">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
-                </div>
-              </div>
+          <div className="relative group">
+            {/* Ambient Background Glow */}
+            <div className="absolute -inset-1.5 rounded-[2.5rem] bg-gradient-to-r from-blue-500 via-violet-500 to-emerald-500 opacity-60 blur-xl group-hover:opacity-85 transition duration-1000 group-hover:duration-200" />
+            
+            {/* Image Wrapper */}
+            <motion.div 
+              initial={{ scale: isMobile ? 0.98 : 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: isMobile ? 0.4 : 0.8, ease: 'easeOut' }}
+              className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[350px] md:h-[350px] rounded-[2.5rem] overflow-hidden p-[3px] bg-gradient-to-tr from-blue-500 via-violet-500 to-emerald-500 shadow-2xl"
+            >
+              <img 
+                src={imgSrc} 
+                alt={name} 
+                onError={() => setImgSrc('https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=400&h=400')}
+                className="w-full h-full object-cover rounded-[2.4rem] bg-slate-950 transition-transform duration-500 group-hover:scale-105"
+              />
+            </motion.div>
 
-              {/* Code Snippet / AI Agent Simulation Visual */}
-              <div className="flex-1 py-6 font-mono text-xs sm:text-sm text-gray-300 space-y-4">
-                <p className="text-gray-500">{"// Orchestrating AI verification pipeline"}</p>
-                <p>
-                  <span className="text-violet-400">const</span> agent = <span className="text-blue-400">new</span> <span className="text-emerald-400">LangChainAgent</span>({'{'}
-                  <br />
-                  &nbsp;&nbsp;model: <span className="text-amber-300">'gpt-4o'</span>,
-                  <br />
-                  &nbsp;&nbsp;temperature: <span className="text-emerald-400">0.0</span>
-                  <br />
-                  {'}'})
-                </p>
-                <p>
-                  <span className="text-violet-400">await</span> agent.<span className="text-blue-400">run</span>({'{'}
-                  <br />
-                  &nbsp;&nbsp;verifyClaims: <span className="text-blue-400">true</span>,
-                  <br />
-                  &nbsp;&nbsp;backend: <span className="text-amber-300">'FastAPI'</span>
-                  <br />
-                  {'}'})
-                </p>
-                <p className="text-emerald-400 flex items-center space-x-2 animate-pulse mt-4">
-                  <Bot className="w-4 h-4" />
-                  <span>Pipeline Active: 100% Verified</span>
-                </p>
-              </div>
+            {/* Floating Info Badge 1: AI/ML Status */}
+            <motion.div 
+              initial={{ opacity: 0, x: isMobile ? -10 : -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: isMobile ? 0.2 : 0.4, duration: isMobile ? 0.35 : 0.6 }}
+              className="absolute -bottom-4 -left-4 glass px-4 py-2.5 rounded-xl border border-white/10 flex items-center space-x-2 shadow-lg"
+            >
+              <span className="flex h-2.5 w-2.5 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+              </span>
+              <span className="text-xs font-mono text-gray-300">Active Pipeline</span>
+            </motion.div>
 
-              <div className="border-t border-white/5 pt-4 flex justify-between items-center text-xs text-gray-500">
-                <span>Aditya Singh</span>
-                <span>K.R. Mangalam University</span>
-              </div>
-            </div>
+            {/* Floating Info Badge 2: Specialization */}
+            <motion.div 
+              initial={{ opacity: 0, x: isMobile ? 10 : 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: isMobile ? 0.3 : 0.6, duration: isMobile ? 0.35 : 0.6 }}
+              className="absolute -top-4 -right-4 glass px-4 py-2.5 rounded-xl border border-white/10 flex items-center space-x-2 shadow-lg"
+            >
+              <Bot className="w-4 h-4 text-violet-400" />
+              <span className="text-xs font-mono text-gray-300">AI/ML Engineer</span>
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>

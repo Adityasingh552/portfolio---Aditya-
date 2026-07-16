@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { RotateCcw } from 'lucide-react'
 import profileData from '../data/profileData.json'
 import ProjectCard from './ProjectCard'
 
 export default function Projects({ selectedTag, setSelectedTag }) {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   const projects = profileData.projects
 
   // Filter projects if selectedTag is set
@@ -39,18 +49,18 @@ export default function Projects({ selectedTag, setSelectedTag }) {
 
         {/* Project Grid */}
         <motion.div
-          layout
+          layout={!isMobile}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <motion.div
                 key={project.title}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
+                layout={!isMobile}
+                initial={{ opacity: 0, scale: isMobile ? 0.98 : 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, scale: isMobile ? 0.98 : 0.9 }}
+                transition={{ duration: isMobile ? 0.2 : 0.3 }}
                 className="h-full"
               >
                 <ProjectCard

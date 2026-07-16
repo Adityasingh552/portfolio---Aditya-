@@ -3,51 +3,31 @@
     "name": "Aditya Singh",
     "title": "AI/ML Engineer & Full-Stack Developer",
     "subtitle": "Building intelligent systems that verify, predict, and automate.",
-    "resumeUrl": "/resume.pdf",
+    "resumeUrl": "resume.pdf",
+    "location": "Sohna, Gurgaon",
     "socials": {
-      "github": "https://github.com",
-      "linkedin": "https://linkedin.com",
-      "email": "aditya.singh@example.com"
+      "github": "https://github.com/Adityasingh552",
+      "linkedin": "https://www.linkedin.com/in/aditya-singh-56dfg/",
+      "email": "adityasingh85418@gmail.com"
     }
   },
   "about": {
-    "summary": "Aditya is a final-year B.Tech Computer Science Engineering student specializing in Artificial Intelligence and Machine Learning at K.R. Mangalam University, graduating in July 2027. He has successfully completed multiple machine learning and data science internships and currently builds full-stack AI products. His portfolio spans resume-verification engines, voice-enabled AI agents, and computer vision alerting systems, combining LangChain-based orchestration, FastAPI backends, and modern React frontends. Certified in Large Language Models and Neural Networks & Deep Learning."
+    "summary": "Aditya is a Computer Science undergraduate student specializing in Artificial Intelligence and Machine Learning at K.R. Mangalam University (expected graduation May 2027). He has hands-on experience building end-to-end ML pipelines, with skills in data preprocessing, feature engineering, model training, and evaluation using Python and Scikit-learn. He has successfully completed multiple Machine Learning and Data Science internships and holds a strong foundation in data structures, problem solving, and applied machine learning workflows."
   },
   "experience": [
     {
-      "company": "EDXcellence LLP",
+      "company": "EDXcellence",
       "role": "Machine Learning Intern",
-      "period": "Jan 2026 – Mar 2026",
+      "period": "Jan 2026 – March 2026",
       "duration": "3 months",
-      "description": "Contributed to projects leveraging data aggregation, feature selection, and Git-based collaboration."
+      "description": "• Learned and implemented Machine Learning models using Python.\n• Worked on data cleaning, preprocessing, model training, and evaluation.\n• Used Pandas, NumPy, Scikit-learn, and visualization tools for ML tasks.\n• Gained practical understanding of the ML workflow from dataset to prediction."
     },
     {
       "company": "Unified Mentor Private Limited",
       "role": "Data Science Intern",
-      "period": "Jun 2025 – Jul 2025",
+      "period": "June 2025 – July 2025",
       "duration": "2 months",
-      "description": "Worked on applied data science tasks including data cleaning and model support."
-    },
-    {
-      "company": "Mood Indigo, IIT Bombay",
-      "role": "Squad Member",
-      "period": "Dec 2024 – Present",
-      "duration": "Ongoing",
-      "description": "Engaged in collaborative event coordination and volunteer squad efforts for Asia's largest college festival."
-    },
-    {
-      "company": "PW (PhysicsWallah)",
-      "role": "Campus Ambassador",
-      "period": "Nov 2024 – Present",
-      "duration": "Ongoing",
-      "description": "Promoting education technology initiatives and representing PW academic support systems on campus."
-    },
-    {
-      "company": "BLACKBOX.AI",
-      "role": "Student Ambassador",
-      "period": "Sep 2024 – Dec 2024",
-      "duration": "4 months",
-      "description": "Promoted AI community initiatives, fostered AI leadership among students, and built AI awareness through resource sharing."
+      "description": "• Developed structured data pipelines for multi-city accident datasets including ingestion, cleaning, and transformation.\n• Applied feature engineering and supported predictive modeling workflows.\n• Used SQL-style data aggregation and grouping techniques to derive business insights.\n• Built visualization dashboards to monitor key performance metrics and data trends."
     },
     {
       "company": "KEIC (KRMU Entrepreneurship & Incubation Center)",
@@ -59,9 +39,9 @@
     {
       "company": "Atharvo",
       "role": "Machine Learning Intern",
-      "period": "Jan 2024",
+      "period": "January 2024",
       "duration": "1 month",
-      "description": "Completed early-stage machine learning internship focused on basic modeling and Python scripting."
+      "description": "• Processed and analyzed multi-city accident datasets using structured data transformation techniques.\n• Performed feature engineering and supported predictive modeling workflows.\n• Applied Random Forest for severity prediction and analyzed feature importance.\n• Built visualization dashboards to communicate analytical insights effectively."
     }
   ],
   "projects": [
@@ -80,80 +60,87 @@
     },
     {
       "title": "Citadel",
-      "description": "Real-time accident detection system processing 1000+ CCTV feeds using YOLO and DETR, with automated Twilio alerting.",
+      "description": "Built a real-time accident detection system using YOLO and DETR on a large-scale dataset of 1000+ CCTV feeds. Developed a video processing pipeline for frame-by-frame analysis and reliable detection across varying lighting and traffic conditions. Integrated a Twilio-based alerting system for high-severity incidents and designed a FastAPI backend to handle concurrent streams.",
       "tags": [
+        "Python",
+        "PyTorch",
+        "OpenCV",
+        "FastAPI",
+        "TypeScript",
+        "SQLite",
         "YOLO",
         "DETR",
-        "Computer Vision",
-        "Twilio",
-        "Python"
+        "Twilio"
       ],
       "github": "https://github.com",
       "demo": "https://example.com"
     },
     {
       "title": "Supermarket Sales Prediction System",
-      "description": "Sales forecasting model achieving 0.91 R² using XGBoost.",
+      "description": "Built an end-to-end data processing pipeline for structured retail sales datasets. Engineered and transformed raw transactional data into model-ready format using feature extraction techniques, and implemented regression modeling using XGBoost achieving an R² score of 0.91.",
       "tags": [
-        "XGBoost",
         "Python",
-        "Data Science"
+        "Pandas",
+        "Scikit-learn",
+        "XGBoost",
+        "Streamlit",
+        "Matplotlib",
+        "Git"
       ],
       "github": "https://github.com",
       "demo": "https://example.com"
     }
   ],
   "skills": {
-    "Languages": [
+    "Programming Languages": [
       "Python",
-      "JavaScript"
+      "SQL"
     ],
-    "AI/ML": [
-      "LangChain",
-      "XGBoost",
-      "YOLO",
-      "DETR",
-      "Neural Networks",
-      "LLMs"
+    "Machine Learning": [
+      "Supervised Learning",
+      "Regression",
+      "Classification",
+      "Model Evaluation",
+      "Feature Engineering"
     ],
-    "Backend": [
-      "FastAPI"
+    "Data Processing": [
+      "Data Cleaning",
+      "Data Transformation",
+      "EDA",
+      "Structured Dataset Handling"
     ],
-    "Frontend": [
-      "JavaScript",
-      "Vite",
-      "Tailwind CSS"
+    "Libraries": [
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib"
     ],
-    "Databases": [
-      "PostgreSQL",
-      "MongoDB",
-      "SQL Server"
+    "Core CS": [
+      "Data Structures & Algorithms",
+      "OOP"
     ],
     "Tools": [
       "Git",
-      "Postman",
-      "Twilio",
-      "Airtable",
-      "Data Cleaning",
-      "Incident Investigation"
+      "GitHub",
+      "Jupyter Notebook",
+      "Streamlit"
     ]
   },
   "certifications": [
     {
-      "name": "Large Language Models",
-      "issuer": "Certificate of Accomplishment"
+      "name": "Big Data Engineer",
+      "issuer": "IBM",
+      "date": "Oct 2025"
     },
     {
-      "name": "Neural Networks and Deep Learning",
-      "issuer": "Certificate of Accomplishment"
+      "name": "Foundations of AI, Data Science & Analytics",
+      "issuer": "Samatrix Group",
+      "date": "Jan 2024"
     },
     {
-      "name": "Generative AI",
-      "issuer": "Google"
-    },
-    {
-      "name": "Foundations of AI Data Science",
-      "issuer": "Cognitive Class"
+      "name": "Data Analysis With Python",
+      "issuer": "IBM Developer Skills Network",
+      "date": "Jan 2024"
     }
   ]
 }

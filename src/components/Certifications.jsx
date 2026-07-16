@@ -68,7 +68,7 @@ export default function Certifications() {
                     {cert.name}
                   </h3>
                   <p className="text-xs text-gray-500 tracking-wider uppercase font-medium">
-                    {cert.issuer}
+                    {cert.issuer} {cert.date && `• ${cert.date}`}
                   </p>
                 </div>
               </div>

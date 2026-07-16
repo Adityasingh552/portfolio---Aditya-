@@ -37,24 +37,8 @@ export default function Contact() {
 
     setStatus({ submitting: true, success: null, message: '' })
 
-    // TODO: Replace with your Formspree endpoint — https://formspree.io/f/YOUR_FORM_ID
-    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
-
-    if (FORMSPREE_ENDPOINT === 'https://formspree.io/f/YOUR_FORM_ID') {
-      // Simulate submission in development environment if endpoint is placeholder
-      setTimeout(() => {
-        setStatus({
-          submitting: false,
-          success: true,
-          message: 'Thank you! Your message has been sent successfully (Development Sandbox mode).'
-        })
-        setFormData({ name: '', email: '', subject: '', message: '' })
-      }, 1500)
-      return
-    }
-
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch('https://formspree.io/f/xojgjkno', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

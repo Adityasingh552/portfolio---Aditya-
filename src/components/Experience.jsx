@@ -1,25 +1,36 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Briefcase, Calendar, MapPin } from 'lucide-react'
 import profileData from '../data/profileData.json'
 
 export default function Experience() {
   const experiences = profileData.experience
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.15
+        staggerChildren: isMobile ? 0.08 : 0.15
       }
     }
   }
 
   const cardVariants = {
-    hidden: { opacity: 0, x: -30 },
+    hidden: { opacity: 0, x: isMobile ? -15 : -30 },
     visible: {
       opacity: 1,
       x: 0,
-      transition: { type: 'spring', stiffness: 80, damping: 15 }
+      transition: isMobile
+        ? { duration: 0.35, ease: 'easeOut' }
+        : { type: 'spring', stiffness: 80, damping: 15 }
     }
   }
 
@@ -46,7 +57,7 @@ export default function Experience() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: '-100px' }}
+            viewport={{ once: true, margin: isMobile ? '-30px' : '-100px' }}
             className="space-y-12"
           >
             {experiences.map((exp, index) => (
@@ -84,7 +95,7 @@ export default function Experience() {
                   </div>
 
                   {exp.description && (
-                    <p className="text-gray-400 text-sm font-light leading-relaxed mt-4">
+                    <p className="text-gray-400 text-sm font-light leading-relaxed mt-4 whitespace-pre-line">
                       {exp.description}
                     </p>
                   )}

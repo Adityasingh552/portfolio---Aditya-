@@ -1,9 +1,19 @@
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 export default function SkillChip({ skill, isActive, onClick }) {
+  const [isTouch, setIsTouch] = useState(false)
+
+  useEffect(() => {
+    const checkTouch = () => {
+      setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0)
+    }
+    checkTouch()
+  }, [])
+
   return (
     <motion.button
-      whileHover={{ y: -2, scale: 1.03 }}
+      whileHover={isTouch ? {} : { y: -2, scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       onClick={onClick}
       className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 font-display ${
