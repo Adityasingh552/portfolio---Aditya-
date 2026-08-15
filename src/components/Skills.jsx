@@ -64,18 +64,18 @@ export default function Skills({ selectedTag, setSelectedTag }) {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/25 px-4 py-2 rounded-full"
+              className="inline-flex items-center space-x-2 bg-[#d4af37]/10 border border-[#d4af37]/30 px-4 py-2 rounded-full"
             >
-              <Filter className="w-4 h-4 text-blue-400" />
+              <Filter className="w-4 h-4 text-[#d4af37]" />
               <span className="text-sm text-gray-300">
-                Filtering by: <strong className="text-blue-400 font-medium">{selectedTag}</strong>
+                Filtering by: <strong className="text-[#d4af37] font-medium">{selectedTag}</strong>
               </span>
               <button
                 onClick={() => setSelectedTag(null)}
-                className="hover:bg-blue-500/20 p-1 rounded-full transition-colors ml-1"
+                className="hover:bg-[#d4af37]/20 p-1 rounded-full transition-colors ml-1"
                 aria-label="Clear filter"
               >
-                <X className="w-3 h-3 text-blue-400" />
+                <X className="w-3 h-3 text-[#d4af37]" />
               </button>
             </motion.div>
           )}

@@ -34,7 +34,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'backdrop-blur-md bg-[#0a0e1a]/40 border-b border-white/5 py-3 shadow-lg' 
+          ? 'glass-nav py-3 shadow-lg' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -42,7 +42,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo / Brand Name */}
           <a href="#" className="flex items-center space-x-2 group">
-            <span className="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
+            <span className="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#d4af37] bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
               {name}
             </span>
           </a>
@@ -53,7 +53,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-sm font-medium text-stone-300 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-300 transition-colors duration-200"
               >
                 {item.label}
               </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
               href={socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-stone-400 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-400 transition-colors duration-200"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5" />
@@ -75,16 +75,16 @@ export default function Navbar() {
               href={socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-stone-400 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-400 transition-colors duration-200"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5" />
             </a>
             <a
               href="#contact"
-              className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase border border-cyan-500/30 text-cyan-400 bg-cyan-500/5 hover:bg-cyan-500/10 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all duration-300"
+              className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase border border-[#d4af37]/40 text-[#d4af37] bg-[#d4af37]/10 hover:bg-[#d4af37] hover:text-[#0f0d0d] focus:bg-[#d4af37] focus:text-[#0f0d0d] active:bg-[#b89628] active:text-[#0f0d0d] visited:text-[#d4af37] hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all duration-300"
             >
-              Let's Connect
+              Get In Touch
             </a>
           </div>
 
@@ -92,7 +92,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-400 hover:text-white p-2"
+              className="text-gray-400 hover:text-[#d4af37] focus:text-[#d4af37] p-2"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -109,7 +109,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden backdrop-blur-lg bg-[#0a0e1a]/95 border-b border-white/5"
+            className="md:hidden backdrop-blur-lg bg-[#0f0d0d]/95 border-b border-[#d4af37]/10"
           >
             <div className="px-4 pt-2 pb-6 space-y-4">
               {navItems.map((item) => (
@@ -117,7 +117,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-base font-medium text-gray-400 hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-colors"
+                  className="block text-base font-medium text-stone-300 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-300 hover:bg-white/5 px-3 py-2 rounded-lg transition-colors"
                 >
                   {item.label}
                 </a>
@@ -127,7 +127,7 @@ export default function Navbar() {
                   href={socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white p-2"
+                  className="text-stone-400 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-400 p-2"
                   aria-label="GitHub"
                 >
                   <Github className="w-6 h-6" />
@@ -136,14 +136,14 @@ export default function Navbar() {
                   href={socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white p-2"
+                  className="text-stone-400 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-400 p-2"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a
                   href={`mailto:${socials.email}`}
-                  className="text-gray-400 hover:text-white p-2"
+                  className="text-stone-400 hover:text-[#d4af37] focus:text-[#d4af37] active:text-[#d4af37] visited:text-stone-400 p-2"
                   aria-label="Email"
                 >
                   <Mail className="w-6 h-6" />

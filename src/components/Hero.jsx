@@ -126,7 +126,7 @@ export default function Hero() {
           {/* Badge */}
           <motion.div
             variants={itemVariants}
-            className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-blue-500/30 text-blue-400 bg-blue-500/5 text-xs font-semibold uppercase tracking-wider font-display glow-blue"
+            className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full border border-[#d4af37]/30 text-[#d4af37] bg-[#d4af37]/5 text-xs font-semibold uppercase tracking-wider font-display glow-gold"
           >
             <Sparkles className="w-3.5 h-3.5" />
             <span>Open for Opportunities</span>
@@ -158,7 +158,7 @@ export default function Hero() {
           >
             <a
               href="#projects"
-              className="group inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white font-medium px-6 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] btn-glow-hover shadow-lg"
+              className="group inline-flex items-center space-x-2 bg-gradient-to-r from-[#d4af37] to-[#b89628] hover:from-[#e5c158] hover:to-[#c5a030] text-[#0f0d0d] font-semibold px-6 py-3.5 rounded-xl transition-all duration-300 hover:scale-[1.02] btn-glow-hover shadow-lg"
             >
               <span>View My Work</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

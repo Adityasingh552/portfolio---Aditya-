@@ -7,14 +7,41 @@
     --surface: #1e0a0d;
     --gold: #d4af37;
     --gold-muted: rgba(212, 175, 55, 0.15);
-    --warm-white: #faf8f5;
+    --warm-white: #f5f0e8;
   }
 
   body {
-    background: linear-gradient(180deg, #0a0e1a 0%, #0d1117 100%);
-    background-color: #0a0e1a;
-    color: #f3f4f6;
+    background-color: #0f0d0d;
+    color: #f5f0e8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  a, a:visited, a:hover, a:focus, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+a, a:visited, a:active, a:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: #d4af37;
+  color: #0f0d0d;
+}
+
+::-moz-selection {
+  background: #d4af37;
+  color: #0f0d0d;
+}
+
+*:focus-visible {
+  outline: 2px solid #d4af37;
+  outline-offset: 2px;
 }
 
 /* Custom Scrollbar */
@@ -23,63 +50,72 @@
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0e1a;
+  background: #0f0d0d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #151e36;
+  background: #2a2022;
   border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b82f6;
+  background: #d4af37;
 }
 
 /* Glassmorphism Helper Classes */
 .glass {
-  background: rgba(10, 14, 26, 0.7);
+  background: rgba(26, 12, 16, 0.65);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.08);
 }
 
 .glass-nav {
-  background: rgba(10, 14, 26, 0.45);
+  background: rgba(15, 13, 13, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.1);
 }
 
 /* Grid Overlay */
 .grid-bg {
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    linear-gradient(to right, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
 /* Gradient Texts */
 .text-gradient {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #22d3ee 100%);
+  background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #d4af37 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* Glow effects */
+.glow-gold {
+  box-shadow: 0 0 50px -10px rgba(212, 175, 55, 0.25);
+}
+
+.glow-burgundy {
+  box-shadow: 0 0 50px -10px rgba(128, 0, 32, 0.25);
+}
+
 .glow-blue {
-  box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 0 50px -10px rgba(212, 175, 55, 0.25);
 }
 
 .glow-violet {
-  box-shadow: 0 0 50px -10px rgba(139, 92, 246, 0.25);
+  box-shadow: 0 0 50px -10px rgba(128, 0, 32, 0.25);
 }
 
 .glow-cyan {
-  box-shadow: 0 0 50px -10px rgba(34, 211, 238, 0.25);
+  box-shadow: 0 0 50px -10px rgba(212, 175, 55, 0.25);
 }
 
 /* Premium 1px Gradient Border & Glow on hover */
 .gradient-border-hover {
   position: relative;
-  background: rgba(10, 14, 26, 0.6) !important;
+  background: rgba(30, 10, 13, 0.6) !important;
   background-clip: padding-box !important;
   border: 1px solid transparent !important;
   transition: all 0.3s ease-in-out;
@@ -91,7 +127,7 @@
   z-index: -1;
   margin: -1px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #d4af37, #800020);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -100,7 +136,7 @@
   opacity: 1;
 }
 .gradient-border-hover:hover {
-  box-shadow: 0 0 15px 1px rgba(59, 130, 246, 0.12), 0 0 15px 1px rgba(139, 92, 246, 0.12);
+  box-shadow: 0 0 15px 1px rgba(212, 175, 55, 0.12), 0 0 15px 1px rgba(128, 0, 32, 0.12);
 }
 
 /* Button Hover Glow Utility */
@@ -108,10 +144,11 @@
   transition: all 0.3s ease-in-out;
 }
 .btn-glow-hover:hover {
-  box-shadow: 0 0 25px 0px rgba(59, 130, 246, 0.35), 0 0 25px 0px rgba(139, 92, 246, 0.15);
+  box-shadow: 0 0 25px 0px rgba(212, 175, 55, 0.35), 0 0 25px 0px rgba(128, 0, 32, 0.15);
 }
 
 /* Input Styles */
 input:focus, textarea:focus {
   outline: none;
+  border-color: rgba(212, 175, 55, 0.6);
 }

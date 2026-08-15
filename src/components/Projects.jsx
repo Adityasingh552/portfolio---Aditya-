@@ -79,7 +79,7 @@ export default function Projects({ selectedTag, setSelectedTag }) {
             <p className="text-gray-400">No projects found with tag "#{selectedTag}"</p>
             <button
               onClick={() => setSelectedTag(null)}
-              className="mt-4 text-blue-400 hover:text-blue-300 font-medium underline text-sm"
+              className="mt-4 text-[#d4af37] hover:text-[#f3e5ab] font-medium underline text-sm"
             >
               Show all projects
             </button>

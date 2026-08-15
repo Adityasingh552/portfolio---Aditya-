@@ -76,9 +76,9 @@ export default function Contact() {
         {/* Section Heading */}
         <div className="text-center space-y-2 flex flex-col items-center">
           <div className="flex items-center justify-center gap-3">
-            <div className="w-1.5 h-8 bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full" />
+            <div className="w-1.5 h-8 bg-gradient-to-b from-[#d4af37] to-[#d4af37]/40 rounded-full" />
             <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
-              Get In <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
+              Get In <span className="bg-gradient-to-r from-[#d4af37] to-[#f3e5ab] bg-clip-text text-transparent">Touch</span>
             </h2>
           </div>
           <p className="text-slate-300 text-sm sm:text-base font-light max-w-md mx-auto pt-2">
@@ -95,7 +95,7 @@ export default function Contact() {
               {/* Name Field */}
               <div className="space-y-2">
                 <label htmlFor="name" className="flex items-center space-x-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                  <User className="w-3.5 h-3.5 text-cyan-400" />
+                  <User className="w-3.5 h-3.5 text-[#d4af37]" />
                   <span>Name <strong className="text-red-500/85">*</strong></span>
                 </label>
                 <input
@@ -105,7 +105,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full bg-white/5 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-500/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300"
+                  className="w-full bg-white/5 border border-white/5 focus:border-[#d4af37]/50 focus:bg-[#d4af37]/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300"
                   required
                 />
               </div>
@@ -113,7 +113,7 @@ export default function Contact() {
               {/* Email Field */}
               <div className="space-y-2">
                 <label htmlFor="email" className="flex items-center space-x-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                  <AtSign className="w-3.5 h-3.5 text-cyan-400" />
+                  <AtSign className="w-3.5 h-3.5 text-[#d4af37]" />
                   <span>Email <strong className="text-red-500/85">*</strong></span>
                 </label>
                 <input
@@ -123,7 +123,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="name@example.com"
-                  className="w-full bg-white/5 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-500/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300"
+                  className="w-full bg-white/5 border border-white/5 focus:border-[#d4af37]/50 focus:bg-[#d4af37]/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300"
                   required
                 />
               </div>
@@ -132,7 +132,7 @@ export default function Contact() {
             {/* Subject Field */}
             <div className="space-y-2">
               <label htmlFor="subject" className="flex items-center space-x-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                <TextQuote className="w-3.5 h-3.5 text-cyan-400" />
+                <TextQuote className="w-3.5 h-3.5 text-[#d4af37]" />
                 <span>Subject</span>
               </label>
               <input
@@ -142,14 +142,14 @@ export default function Contact() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="How can I help you?"
-                className="w-full bg-white/5 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-500/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300"
+                className="w-full bg-white/5 border border-white/5 focus:border-[#d4af37]/50 focus:bg-[#d4af37]/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300"
               />
             </div>
 
             {/* Message Field */}
             <div className="space-y-2">
               <label htmlFor="message" className="flex items-center space-x-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                <MessageSquare className="w-3.5 h-3.5 text-cyan-400" />
+                <MessageSquare className="w-3.5 h-3.5 text-[#d4af37]" />
                 <span>Message <strong className="text-red-500/85">*</strong></span>
               </label>
               <textarea
@@ -159,7 +159,7 @@ export default function Contact() {
                 onChange={handleChange}
                 placeholder="Write your message here..."
                 rows="5"
-                className="w-full bg-white/5 border border-white/5 focus:border-cyan-500/50 focus:bg-cyan-500/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300 resize-none"
+                className="w-full bg-white/5 border border-white/5 focus:border-[#d4af37]/50 focus:bg-[#d4af37]/5 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 transition-all duration-300 resize-none"
                 required
               ></textarea>
             </div>
@@ -173,7 +173,7 @@ export default function Contact() {
                   exit={{ opacity: 0, y: -10 }}
                   className={`flex items-start space-x-3 p-4 rounded-xl border text-sm ${
                     status.success
-                      ? 'bg-cyan-500/10 border-cyan-500/30 text-cyan-400'
+                      ? 'bg-[#d4af37]/10 border-[#d4af37]/30 text-[#d4af37]'
                       : 'bg-red-500/10 border-red-500/30 text-red-400'
                   }`}
                 >
@@ -191,7 +191,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status.submitting}
-              className="group w-full md:w-auto inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 disabled:from-blue-800 disabled:to-violet-800 text-white font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-[1.01] btn-glow-hover shadow-lg"
+              className="group w-full md:w-auto inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-[#d4af37] to-[#b89628] hover:from-[#e5c158] hover:to-[#c5a030] disabled:from-[#8a7224] disabled:to-[#6d5a1c] text-[#0f0d0d] font-semibold px-8 py-3.5 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-[1.01] btn-glow-hover shadow-lg"
             >
               <span>{status.submitting ? 'Sending Message...' : 'Send Message'}</span>
               <Send className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${status.submitting ? 'animate-pulse' : ''}`} />

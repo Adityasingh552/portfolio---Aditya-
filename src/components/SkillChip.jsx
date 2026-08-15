@@ -18,8 +18,8 @@ export default function SkillChip({ skill, isActive, onClick }) {
       onClick={onClick}
       className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-medium tracking-wide transition-all duration-300 font-display ${
         isActive
-          ? 'bg-gradient-to-r from-blue-600 to-violet-600 text-white shadow-lg shadow-blue-500/25 border border-transparent'
-          : 'bg-white/5 text-slate-400 hover:text-cyan-300 hover:bg-cyan-500/5 border border-white/5 hover:border-cyan-500/30 hover:shadow-[0_0_12px_rgba(34,211,238,0.12)]'
+          ? 'bg-gradient-to-r from-[#d4af37] to-[#b89628] text-[#0f0d0d] font-semibold shadow-lg shadow-[#d4af37]/20 border border-transparent'
+          : 'bg-white/5 text-stone-300 hover:text-[#d4af37] hover:bg-[#d4af37]/10 border border-white/5 hover:border-[#d4af37]/30 hover:shadow-[0_0_12px_rgba(212,175,55,0.12)]'
       }`}
     >
       {skill}
