@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { RotateCcw } from 'lucide-react'
@@ -29,11 +30,11 @@ export default function Projects({ selectedTag, setSelectedTag }) {
       <div className="space-y-12">
         {/* Section Heading & Reset Filter Action */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
-          <div className="space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+          <div className="flex flex-col md:flex-row md:items-center gap-3 text-center md:text-left">
+            <div className="w-20 md:w-1.5 h-1 md:h-8 bg-gradient-to-r md:bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full mx-auto md:mx-0 order-2 md:order-1" />
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight order-1 md:order-2">
               Featured <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">Projects</span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-violet-500 rounded" />
           </div>
 
           {selectedTag && (

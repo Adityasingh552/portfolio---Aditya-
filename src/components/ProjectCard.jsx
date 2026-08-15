@@ -40,7 +40,7 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
     // Dynamic radial gradient moving with mouse
     setSpotlightStyle({
       opacity: 1,
-      background: `radial-gradient(300px circle at ${x}px ${y}px, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.05) 50%, transparent 100%)`
+      background: `radial-gradient(300px circle at ${x}px ${y}px, rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.05) 50%, rgba(34, 211, 238, 0.02) 80%, transparent 100%)`
     })
   }
 
@@ -60,7 +60,7 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
         transition: 'transform 0.1s ease-out, box-shadow 0.3s ease-in-out',
         transformStyle: 'preserve-3d'
       }}
-      className="glass p-6 rounded-2xl flex flex-col justify-between h-full relative group overflow-hidden border border-white/5 hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/5"
+      className="glass p-6 rounded-2xl flex flex-col justify-between h-full relative group overflow-hidden border border-white/5 transition-all duration-300 gradient-border-hover hover:scale-[1.01] hover:shadow-xl"
     >
       {/* Dynamic Cursor spotlight follow glow */}
       <div
@@ -79,7 +79,7 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-slate-400 hover:text-cyan-300 transition-colors duration-200"
               aria-label="GitHub Repository"
             >
               <Github className="w-5 h-5" />
@@ -88,7 +88,7 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors duration-200"
+              className="text-slate-400 hover:text-cyan-300 transition-colors duration-200"
               aria-label="Live Demo"
             >
               <ExternalLink className="w-5 h-5" />
@@ -102,7 +102,7 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
         </h3>
 
         {/* Description */}
-        <p className="text-gray-400 text-sm font-light leading-relaxed">
+        <p className="text-slate-300 text-sm font-light leading-relaxed">
           {project.description}
         </p>
       </div>
@@ -115,8 +115,8 @@ export default function ProjectCard({ project, onTagClick, activeTag }) {
             onClick={() => onTagClick(tag)}
             className={`px-2.5 py-1 rounded-lg text-xs font-mono font-medium transition-all duration-300 ${
               activeTag === tag
-                ? 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
-                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-gray-200 border border-white/5'
+                ? 'bg-blue-500/20 text-cyan-300 border border-blue-500/30 shadow-[0_0_8px_rgba(59,130,246,0.15)]'
+                : 'bg-white/5 text-slate-400 hover:bg-cyan-500/5 hover:text-cyan-300 border border-white/5 hover:border-cyan-500/20'
             }`}
           >
             #{tag}

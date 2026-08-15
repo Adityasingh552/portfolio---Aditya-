@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        darkBg: '#0a0a0f',
-        cardBg: '#0f0f17',
+        darkBg: '#0a0e1a',
+        cardBg: '#0b1120',
         electricBlue: '#3b82f6',
         electricViolet: '#8b5cf6',
-        neonEmerald: '#10b981',
+        neonCyan: '#22d3ee',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

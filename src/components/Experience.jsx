@@ -41,17 +41,17 @@ export default function Experience() {
 
       <div className="space-y-12">
         {/* Section Heading */}
-        <div className="text-center md:text-left space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+        <div className="flex flex-col md:flex-row md:items-center gap-3 text-center md:text-left">
+          <div className="w-20 md:w-1.5 h-1 md:h-8 bg-gradient-to-r md:bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full mx-auto md:mx-0 order-2 md:order-1" />
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight order-1 md:order-2">
             Work <span className="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-blue-500 rounded mx-auto md:mx-0" />
         </div>
 
         {/* Vertical Timeline container */}
         <div className="relative max-w-3xl mx-auto md:mx-0 pl-8 md:pl-10 space-y-12 py-4">
           {/* Vertical glowing timeline line */}
-          <div className="absolute left-3.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-violet-500 to-emerald-500/10" />
+          <div className="absolute left-3.5 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-violet-500 to-cyan-500/10" />
 
           <motion.div
             variants={containerVariants}
@@ -67,12 +67,12 @@ export default function Experience() {
                 className="relative group"
               >
                 {/* Timeline node dot */}
-                <div className="absolute -left-[37px] md:-left-[41px] top-1.5 w-6 h-6 rounded-full bg-[#0a0a0f] border-2 border-violet-500 flex items-center justify-center transition-all duration-300 group-hover:border-emerald-400 group-hover:scale-110">
-                  <div className="w-2.5 h-2.5 rounded-full bg-violet-400 group-hover:bg-emerald-400 transition-colors" />
+                <div className="absolute -left-[37px] md:-left-[41px] top-1.5 w-6 h-6 rounded-full bg-[#0a0e1a] border-2 border-violet-500 flex items-center justify-center transition-all duration-300 group-hover:border-cyan-400 group-hover:scale-110">
+                  <div className="w-2.5 h-2.5 rounded-full bg-violet-400 group-hover:bg-cyan-400 transition-colors" />
                 </div>
 
                 {/* Content Card */}
-                <div className="glass p-6 rounded-2xl relative overflow-hidden transition-all duration-300 group-hover:border-white/15 hover:shadow-xl hover:shadow-violet-950/10">
+                <div className="glass p-6 rounded-2xl relative overflow-hidden transition-all duration-300 gradient-border-hover hover:scale-[1.01] hover:shadow-xl">
                   {/* Subtle border shine effect */}
                   <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-500 to-violet-500 rounded-l-2xl" />
 
@@ -86,16 +86,16 @@ export default function Experience() {
                       </p>
                     </div>
 
-                    <div className="flex items-center space-x-2 text-xs text-gray-500 bg-white/5 w-fit px-3 py-1 rounded-full border border-white/5">
-                      <Calendar className="w-3.5 h-3.5" />
+                    <div className="flex items-center space-x-2 text-xs text-slate-400 bg-white/5 w-fit px-3 py-1 rounded-full border border-white/5">
+                      <Calendar className="w-3.5 h-3.5 text-slate-400" />
                       <span>{exp.period}</span>
-                      <span className="text-gray-600">•</span>
+                      <span className="text-slate-500">•</span>
                       <span>{exp.duration}</span>
                     </div>
                   </div>
 
                   {exp.description && (
-                    <p className="text-gray-400 text-sm font-light leading-relaxed mt-4 whitespace-pre-line">
+                    <p className="text-slate-300 text-sm font-light leading-relaxed mt-4 whitespace-pre-line">
                       {exp.description}
                     </p>
                   )}

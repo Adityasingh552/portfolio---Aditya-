@@ -26,7 +26,7 @@ export default function About() {
       value: 'July 2027'
     },
     {
-      icon: <BrainCircuit className="w-6 h-6 text-emerald-400" />,
+      icon: <BrainCircuit className="w-6 h-6 text-cyan-400" />,
       label: 'Core Focus',
       value: 'AI/ML & Agents'
     },
@@ -59,21 +59,21 @@ export default function About() {
         className="space-y-12"
       >
         {/* Section Heading */}
-        <div className="text-center md:text-left space-y-2">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
+        <div className="flex flex-col md:flex-row md:items-center gap-3 text-center md:text-left">
+          <div className="w-20 md:w-1.5 h-1 md:h-8 bg-gradient-to-r md:bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full mx-auto md:mx-0 order-2 md:order-1" />
+          <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight order-1 md:order-2">
             About <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-violet-500 rounded mx-auto md:mx-0" />
         </div>
 
         {/* Narrative and Stats Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-16 items-center">
           {/* Narrative description */}
           <div className="lg:col-span-7 space-y-6">
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-light">
+            <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
               {summary}
             </p>
-            <p className="text-gray-400 text-sm leading-relaxed border-l-2 border-violet-500/40 pl-4 py-1">
+            <p className="text-slate-400 text-sm leading-relaxed border-l-2 border-violet-500/40 pl-4 py-1">
               "Building systems that don't just calculate, but think, verify, and streamline workflows. From automating CCTV accident detection to deploying AI-powered hiring receptionists."
             </p>
           </div>
@@ -83,17 +83,17 @@ export default function About() {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="group relative p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 transition-all duration-300 hover:scale-[1.03]"
+                className="group relative p-5 rounded-2xl transition-all duration-300 hover:scale-[1.03] gradient-border-hover border border-white/5"
               >
                 {/* Accent glow on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-500/5 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-blue-500/5 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 
                 <div className="relative z-10 space-y-4">
                   <div className="p-2 w-fit rounded-lg bg-white/5">
                     {stat.icon}
                   </div>
                   <div>
-                    <h3 className="text-xs text-gray-500 uppercase tracking-wider">{stat.label}</h3>
+                    <h3 className="text-xs text-slate-400 uppercase tracking-wider">{stat.label}</h3>
                     <p className="text-sm sm:text-base font-semibold font-display text-white mt-1">{stat.value}</p>
                   </div>
                 </div>

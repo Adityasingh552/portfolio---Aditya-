@@ -14,14 +14,14 @@ export default function App() {
   const [selectedTag, setSelectedTag] = useState(null)
 
   return (
-    <div className="relative min-h-screen bg-[#0a0a0f] text-gray-100 overflow-hidden font-sans">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#0a0e1a] to-[#0d1117] text-gray-100 overflow-hidden font-sans">
       {/* Background Decorative Ambient Gradients */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-900/10 blur-[150px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-violet-900/10 blur-[150px] pointer-events-none animate-pulse-slow" />
-      <div className="absolute top-[40%] right-[10%] w-[30%] h-[40%] rounded-full bg-emerald-950/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-blue-950/15 blur-[150px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] rounded-full bg-violet-950/15 blur-[150px] pointer-events-none animate-pulse-slow" />
+      <div className="absolute top-[40%] right-[10%] w-[30%] h-[40%] rounded-full bg-cyan-950/10 blur-[120px] pointer-events-none" />
 
       {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grid-bg opacity-45 pointer-events-none" />
 
       <div className="relative z-10">
         <Navbar />

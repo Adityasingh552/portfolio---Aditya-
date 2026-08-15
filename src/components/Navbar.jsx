@@ -34,7 +34,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'backdrop-blur-md bg-black/30 border-b border-white/10 py-3 shadow-lg' 
+          ? 'backdrop-blur-md bg-[#0a0e1a]/40 border-b border-white/5 py-3 shadow-lg' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -42,11 +42,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo / Brand Name */}
           <a href="#" className="flex items-center space-x-2 group">
-            <span className="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 via-violet-400 to-emerald-400 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
+            <span className="font-display font-bold text-xl tracking-tight bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity">
               {name}
             </span>
           </a>
-
+ 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
@@ -59,7 +59,7 @@ export default function Navbar() {
               </a>
             ))}
           </nav>
-
+ 
           {/* Social Links & CTA (Desktop) */}
           <div className="hidden md:flex items-center space-x-4">
             <a
@@ -82,7 +82,7 @@ export default function Navbar() {
             </a>
             <a
               href="#contact"
-              className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase border border-emerald-500/30 text-emerald-400 bg-emerald-500/5 hover:bg-emerald-500/10 hover:border-emerald-500/50 transition-all duration-300"
+              className="px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase border border-cyan-500/30 text-cyan-400 bg-cyan-500/5 hover:bg-cyan-500/10 hover:border-cyan-500/50 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] transition-all duration-300"
             >
               Let's Connect
             </a>
@@ -109,7 +109,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden backdrop-blur-lg bg-black/90 border-b border-white/10"
+            className="md:hidden backdrop-blur-lg bg-[#0a0e1a]/95 border-b border-white/5"
           >
             <div className="px-4 pt-2 pb-6 space-y-4">
               {navItems.map((item) => (

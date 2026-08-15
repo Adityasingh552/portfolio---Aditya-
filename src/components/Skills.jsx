@@ -47,16 +47,16 @@ export default function Skills({ selectedTag, setSelectedTag }) {
   return (
     <section id="skills" className="relative scroll-mt-24">
       {/* Background glow decoration */}
-      <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-emerald-500/5 blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/3 w-64 h-64 rounded-full bg-cyan-500/5 blur-[100px] pointer-events-none" />
 
       <div className="space-y-12">
         {/* Section Heading & Filter Info */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <div className="space-y-2">
-            <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight">
-              Skills & <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">Tech Stack</span>
+          <div className="flex flex-col md:flex-row md:items-center gap-3 text-center md:text-left">
+            <div className="w-20 md:w-1.5 h-1 md:h-8 bg-gradient-to-r md:bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full mx-auto md:mx-0 order-2 md:order-1" />
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-white tracking-tight order-1 md:order-2">
+              Skills & <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Tech Stack</span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded" />
           </div>
 
           {/* Active Filter Banner */}
@@ -93,7 +93,7 @@ export default function Skills({ selectedTag, setSelectedTag }) {
             <motion.div
               key={category}
               variants={cardVariants}
-              className="glass p-6 rounded-2xl relative group overflow-hidden"
+              className="glass p-6 rounded-2xl relative group overflow-hidden gradient-border-hover border border-white/5"
             >
               {/* Corner ambient accent */}
               <div className="absolute -top-10 -right-10 w-24 h-24 rounded-full bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
