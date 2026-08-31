@@ -97,7 +97,7 @@ export default function About() {
           <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full border border-[#d4af37]/35 overflow-hidden flex items-center justify-center bg-[#150709] shrink-0">
             {!imgError ? (
               <img
-                src="/profile.jpg"
+                src={`/${profileData.personal.profileImage || 'profile.jpg'}`}
                 alt={name}
                 className="w-full h-full object-cover"
                 onError={() => setImgError(true)}

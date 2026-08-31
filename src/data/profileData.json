@@ -1,53 +1,63 @@
 {
   "personal": {
     "name": "Aditya Singh",
-    "title": "AI/ML Engineer & Full-Stack Developer",
+    "title": "AI/ML Engineer",
     "subtitle": "Building intelligent systems that verify, predict, and automate.",
-    "resumeUrl": "resume.pdf",
+    "resumeUrl": "AS.resume.pdf",
+    "profileImage": "profile.jpg",
     "location": "Sohna, Gurgaon",
     "socials": {
       "github": "https://github.com/Adityasingh552",
-      "linkedin": "https://www.linkedin.com/in/aditya-singh-56dfg/",
+      "linkedin": "https://www.linkedin.com/in/adityasingh-56dfg",
       "email": "adityasingh85418@gmail.com"
     }
   },
   "about": {
-    "summary": "Aditya is a Computer Science undergraduate student specializing in Artificial Intelligence and Machine Learning at K.R. Mangalam University (expected graduation May 2027). He has hands-on experience building end-to-end ML pipelines, with skills in data preprocessing, feature engineering, model training, and evaluation using Python and Scikit-learn. He has successfully completed multiple Machine Learning and Data Science internships and holds a strong foundation in data structures, problem solving, and applied machine learning workflows."
+    "summary": "Final-year B.Tech CSE (AI & ML) student at K.R. Mangalam University, graduating July 2027. Certified in LLMs and Neural Networks & Deep Learning. Builds full-stack AI products combining LangChain, FastAPI, and React."
   },
+  "education": [
+    {
+      "institution": "K.R. Mangalam University",
+      "degree": "B.Tech CSE (AI and ML)",
+      "period": "September 2023 – July 2027",
+      "duration": "June 2023 – July 2027",
+      "status": "Currently Pursuing"
+    }
+  ],
   "experience": [
     {
-      "company": "EDXcellence",
+      "company": "EDXcellence LLP",
       "role": "Machine Learning Intern",
-      "period": "Jan 2026 – March 2026",
-      "duration": "3 months",
-      "description": "• Learned and implemented Machine Learning models using Python.\n• Worked on data cleaning, preprocessing, model training, and evaluation.\n• Used Pandas, NumPy, Scikit-learn, and visualization tools for ML tasks.\n• Gained practical understanding of the ML workflow from dataset to prediction."
+      "period": "Jan 2026 – Mar 2026",
+      "duration": "3 mos",
+      "description": "• Implemented end-to-end Machine Learning pipelines and trained predictive models.\n• Performed data preprocessing, feature engineering, and model evaluation.\n• Utilized Python, Scikit-learn, Pandas, and NumPy for intelligent data workflows."
     },
     {
       "company": "Unified Mentor Private Limited",
       "role": "Data Science Intern",
-      "period": "June 2025 – July 2025",
-      "duration": "2 months",
-      "description": "• Developed structured data pipelines for multi-city accident datasets including ingestion, cleaning, and transformation.\n• Applied feature engineering and supported predictive modeling workflows.\n• Used SQL-style data aggregation and grouping techniques to derive business insights.\n• Built visualization dashboards to monitor key performance metrics and data trends."
+      "period": "Jun 2025 – Jul 2025",
+      "duration": "2 mos",
+      "description": "• Developed structured data pipelines for multi-city datasets including ingestion and cleaning.\n• Applied advanced feature engineering and predictive modeling workflows.\n• Built visualization dashboards to monitor key performance metrics and analytical trends."
     },
     {
       "company": "KEIC (KRMU Entrepreneurship & Incubation Center)",
       "role": "IoT Intern",
       "period": "Jun 2024 – Jul 2024",
-      "duration": "2 months",
-      "description": "Researched internet-of-things protocols, sensors, and basic hardware integration."
+      "duration": "2 mos",
+      "description": "• Researched Internet of Things protocols, microcontroller architectures, and sensor integration.\n• Built and tested IoT prototypes interfacing hardware sensors with web telemetry."
     },
     {
       "company": "Atharvo",
       "role": "Machine Learning Intern",
-      "period": "January 2024",
-      "duration": "1 month",
-      "description": "• Processed and analyzed multi-city accident datasets using structured data transformation techniques.\n• Performed feature engineering and supported predictive modeling workflows.\n• Applied Random Forest for severity prediction and analyzed feature importance.\n• Built visualization dashboards to communicate analytical insights effectively."
+      "period": "Jan 2024",
+      "duration": "1 mo",
+      "description": "• Processed and transformed structured datasets for machine learning workflows.\n• Engineered features and trained Random Forest models for predictive analysis."
     }
   ],
   "projects": [
     {
       "title": "TrueHire AI",
-      "description": "AI-powered interview intelligence platform that verifies resume claims against GitHub evidence and auto-generates personalized interview questions. Owns full AI/ML orchestration pipeline, LangChain integrations, and scoring logic.",
+      "description": "AI interview intelligence platform that verifies resume claims against GitHub repositories and auto-generates personalized interview questions.",
       "tags": [
         "FastAPI",
         "LangChain",
@@ -55,100 +65,136 @@
         "Vite",
         "Python"
       ],
-      "github": "https://github.com",
-      "demo": "https://example.com"
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
     },
     {
       "title": "Citadel",
-      "description": "Built a real-time accident detection system using YOLO and DETR on a large-scale dataset of 1000+ CCTV feeds. Developed a video processing pipeline for frame-by-frame analysis and reliable detection across varying lighting and traffic conditions. Integrated a Twilio-based alerting system for high-severity incidents and designed a FastAPI backend to handle concurrent streams.",
+      "description": "Real-time accident detection system analyzing CCTV video feeds using YOLO and DETR with Twilio automated incident alerts.",
       "tags": [
-        "Python",
-        "PyTorch",
-        "OpenCV",
-        "FastAPI",
-        "TypeScript",
-        "SQLite",
         "YOLO",
         "DETR",
-        "Twilio"
+        "Computer Vision",
+        "Twilio",
+        "Python"
       ],
-      "github": "https://github.com",
-      "demo": "https://example.com"
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
+    },
+    {
+      "title": "AI Voice Receptionist (QuensultingAI)",
+      "description": "Conversational AI voice receptionist capable of real-time call handling and lead capture using RetellAI, FastAPI, and Airtable.",
+      "tags": [
+        "RetellAI",
+        "FastAPI",
+        "Airtable",
+        "Voice AI"
+      ],
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
+    },
+    {
+      "title": "AI Job Search Agent",
+      "description": "Intelligent job search assistant featuring resume parsing and upload paired with LangChain semantic matching for targeted recommendations.",
+      "tags": [
+        "LangChain",
+        "FastAPI",
+        "JavaScript"
+      ],
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
+    },
+    {
+      "title": "Reimbursement Management System",
+      "description": "Full-stack enterprise expense reimbursement platform with JWT authentication, 4 distinct permission roles, and dual-approval workflow.",
+      "tags": [
+        "Node.js",
+        "Express",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "JWT"
+      ],
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
+    },
+    {
+      "title": "Udyam Registration Clone",
+      "description": "Government registration portal clone with Aadhaar+OTP verification flow and PAN number validation pipelines.",
+      "tags": [
+        "Next.js",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
     },
     {
       "title": "Supermarket Sales Prediction System",
-      "description": "Built an end-to-end data processing pipeline for structured retail sales datasets. Engineered and transformed raw transactional data into model-ready format using feature extraction techniques, and implemented regression modeling using XGBoost achieving an R² score of 0.91.",
+      "description": "End-to-end sales predictive modeling system using XGBoost regression achieving an R² score of 0.91 on retail transactional datasets.",
       "tags": [
-        "Python",
-        "Pandas",
-        "Scikit-learn",
         "XGBoost",
-        "Streamlit",
-        "Matplotlib",
-        "Git"
+        "Python",
+        "Data Science"
       ],
-      "github": "https://github.com",
-      "demo": "https://example.com"
+      "github": "https://github.com/Adityasingh552",
+      "demo": "https://github.com/Adityasingh552"
     }
   ],
   "skills": {
-    "Programming Languages": [
+    "Languages": [
       "Python",
-      "SQL"
+      "JavaScript"
     ],
-    "Machine Learning": [
-      "Supervised Learning",
-      "Regression",
-      "Classification",
-      "Model Evaluation",
-      "Feature Engineering"
+    "AI/ML": [
+      "LangChain",
+      "XGBoost",
+      "YOLO",
+      "DETR",
+      "Neural Networks",
+      "LLMs"
     ],
-    "Data Processing": [
-      "Data Cleaning",
-      "Data Transformation",
-      "EDA",
-      "Structured Dataset Handling"
+    "Backend": [
+      "FastAPI",
+      "Node.js",
+      "Express"
     ],
-    "Libraries": [
-      "Pandas",
-      "NumPy",
-      "Scikit-learn",
-      "Matplotlib"
+    "Frontend": [
+      "React",
+      "Next.js",
+      "Vite",
+      "Tailwind CSS"
     ],
-    "Core CS": [
-      "Data Structures & Algorithms",
-      "OOP"
+    "Databases": [
+      "PostgreSQL",
+      "Supabase"
     ],
     "Tools": [
       "Git",
-      "GitHub",
-      "Jupyter Notebook",
-      "Streamlit"
+      "Postman",
+      "Twilio",
+      "Airtable"
     ]
   },
-  "education": [
-    {
-      "institution": "K.R. Mangalam University",
-      "degree": "Bachelor of Technology (B.Tech) in Computer Science Engineering (Artificial Intelligence and Machine Learning)",
-      "period": "September 2023 – July 2027 (Expected)",
-      "status": "Currently Pursuing"
-    }
-  ],
   "certifications": [
     {
-      "name": "Big Data Engineer",
-      "issuer": "IBM",
-      "date": "Oct 2025"
+      "name": "Large Language Models",
+      "issuer": "Certificate of Accomplishment",
+      "date": "DeepLearning.AI"
     },
     {
-      "name": "Foundations of AI, Data Science & Analytics",
-      "issuer": "Samatrix Group",
-      "date": "Jan 2024"
+      "name": "Neural Networks and Deep Learning",
+      "issuer": "Certificate of Accomplishment",
+      "date": "DeepLearning.AI"
     },
     {
-      "name": "Data Analysis With Python",
-      "issuer": "IBM Developer Skills Network",
-      "date": "Jan 2024"
+      "name": "Generative AI",
+      "issuer": "Google",
+      "date": "Google Cloud"
+    },
+    {
+      "name": "Foundations of AI Data Science",
+      "issuer": "Cognitive Class",
+      "date": "IBM"
     }
   ]
 }
